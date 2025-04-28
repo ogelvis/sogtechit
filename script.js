@@ -1,14 +1,16 @@
-// Simple form validation
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    let name = document.getElementById('name').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let message = document.getElementById('message').value.trim();
-    let formMessage = document.getElementById('formMessage');
-  
-    if (name === "" || email === "" || message === "") {
-      e.preventDefault(); // prevent sending if empty
-      formMessage.style.color = "red";
-      formMessage.textContent = "Please fill all fields.";
-    }
-  });
-  
+(function() {
+  emailjs.init("YOUR_USER_ID"); // Replace YOUR_USER_ID after setting up EmailJS
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+      document.getElementById('form-status').innerHTML = "Message sent successfully!";
+    }, function(error) {
+      document.getElementById('form-status').innerHTML = "Failed to send message. Try again.";
+    });
+
+  this.reset();
+});

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to Subtech IT Academy</h1>
+    <p>Empowering You with Digital Skills</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are passionate about delivering quality IT training and solutions.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <h3>Web Development</h3>
+      <p>Building responsive, modern websites.</p>
+    </div>
+    <div class="service-box">
+      <h3>IT Training</h3>
+      <p>Training sessions for individuals and corporate teams.</p>
+    </div>
+    <div class="service-box">
+      <h3>Consulting</h3>
+      <p>Providing strategic technology advice.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="send_mail.php" method="POST">
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

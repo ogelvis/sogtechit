@@ -1,11 +1,11 @@
 (function() {
-  emailjs.init("MWgOZqQdXeOe3tw0j"); // Replace YOUR_USER_ID after setting up EmailJS
+  emailjs.init("MWgOZqQdXeOe3tw0j"); // Your Public Key
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+  emailjs.sendForm('service_v18igsw', 'template_qyc1wnj', this)
     .then(function() {
       document.getElementById('form-status').innerHTML = "Message sent successfully!";
     }, function(error) {
